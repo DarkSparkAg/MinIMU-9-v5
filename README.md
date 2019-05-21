@@ -20,12 +20,12 @@ An [MinIMU-9 v5](https://www.pololu.com/product/2738/resources) can be purchased
 
 Make the following connections between the Raspberry Pi 3 B+ and the MinIMU-9 v5 board:
 
-    Arduino   LSM6 board
-    -------   ----------
-  5V or 3V3 - VIN
-        GND - GND
-        SDA - SDA
-        SCL - SCL
+      Arduino   LSM6 board
+    ---------   ----------
+    5V or 3V3 - VIN
+          GND - GND
+          SDA - SDA
+          SCL - SCL
 
 ### Software
 
