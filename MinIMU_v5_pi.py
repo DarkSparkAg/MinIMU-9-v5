@@ -5,6 +5,7 @@
 	Add more error handling?
 	Add more variable setup on initiation
 	Update the timing for my accurate polling
+	Create getYaw() and getAngle() functions
 """	
 
 import smbus
