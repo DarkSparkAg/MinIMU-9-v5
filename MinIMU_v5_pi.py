@@ -2,8 +2,9 @@
 #This code was written by Caleb G. Teague in 2017
 
 """To do:
-    Add more error handling?
+	Add more error handling?
 	Add more variable setup on initiation
+	Update the timing for my accurate polling
 """	
 
 import smbus
@@ -14,7 +15,7 @@ import thread
 class MinIMU_v5_pi:
 	#aScale = 2g/2^15, gScale = 500dps/2^15, mScale = 4guass/2^15
 	#You only need to change the scales if you change the settings in the enable functions, 
-	#which this class is not setup to do...
+	#which this class is not yet setup to do...
 	def __init__(self, SMBusNum = 1, aScale = 2*9.806/32768, gScale = 500.0/32768, mScale = 4.0/32768):
 
 		#Accelerometer and Gyro Register addresses
