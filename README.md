@@ -42,4 +42,4 @@ Todo
 
 ## Other
 
-This library is a rowk in progress and was based on the [LSM6](https://github.com/pololu/lsm6-arduino) and [LIS3MDL](https://github.com/pololu/lis3mdl-arduino) libraries created by [pololu](https://github.com/pololu).
+This library is a work in progress and was based on the [LSM6](https://github.com/pololu/lsm6-arduino) and [LIS3MDL](https://github.com/pololu/lis3mdl-arduino) libraries created by [pololu](https://github.com/pololu).
