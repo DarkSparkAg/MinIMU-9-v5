@@ -6,7 +6,17 @@
 	Add more variable setup on initiation
 	Update the timing for my accurate polling
 	Create getYaw() and getAngle() functions
-"""	
+"""
+
+"""12/27/2020
+Concatonate a list of values (integer or boolean) into a single binary number
+e.g. binaryConcatenation([True, 0, 2]) returns 10, e.g. 0b1010 
+def binaryConcatenation(lst):
+	#return '0b' + ''.join(['1' if x else '0' for x in lst])
+	#return '0b' + ''.join([str(int(x)) for x in lst])
+	#return int('0b' + ''.join([str(int(x)) if type(x) is bool else bin(x)[2:] for x in lst]), 2)
+	return int('0b' + ''.join([bin(x)[2:] for x in lst]), 2)
+"""
 
 import smbus
 import time
