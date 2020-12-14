@@ -15,13 +15,12 @@ import thread
 
 class MinIMU_v5_pi:
 	"""
-	aScale = 2g/2^15, mScale = 4guass/2^15
-	You only need to change the scales if you change the settings in the enable functions, 
-	which this class is not yet setup to do...
-	It's now partially set up to hange scale changes :D.  although it's controlled from the range
-	scale is just calculated from that.
+	Init function
+	Valid values for 	aFullScale are 2, 4, 8, and 16 [g]
+						gFullScale are 125, 245, 500, 1000, and 2000 [dps]
+						mFullScale are 4, 8, 12, and 16 [guass]
 	"""
-	def __init__(self, SMBusNum = 1, aFullScale=2, gFullScale=500, mScale = 4.0/32768):
+	def __init__(self, SMBusNum = 1, aFullScale=2, gFullScale=500, mFullScale=4):
 
 		#Accelerometer and Gyro Register addresses
 		self.Accel_Gyro_REG = dict(
@@ -119,9 +118,9 @@ class MinIMU_v5_pi:
 			INT_THS_H   = 0x33)
 
 		#Unit scales
-		self.aScale = 0
-		self.gScale = 0
-		self.mScale = 0
+		self.aScale = 0 #default: aScale = 2g/2^15,
+		self.gScale = 0 #default: gScale = 500dps/2^15
+		self.mScale = 0 #default: mScale = 4guass/2^15
 		
 		#Variables for updateAngle and updateYaw
 		self.prevAngle = [[0,0,0]] #x, y, z (roll, pitch, yaw)
